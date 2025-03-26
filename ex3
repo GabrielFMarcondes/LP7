@@ -1,32 +1,46 @@
 #include <stdio.h>
 
-int main(void) {
-  char modo;
+int main() {
 
-  printf("Digite o modo da máquina (x para encerrar:");
-  scanf("%c", &tamanho);
+    int secar() {
+    printf("Secando...\n\n");
+}
+    int enxaguar_e_secar() {
+    printf("Enxaguando...\n");
+    printf("Secando...\n\n");
+}
+    int lavar_enxaguar_e_secar() {
+    printf("Lavando...\n");
+    printf("Enxaguando...\n");
+    printf("Secando...\n\n");
+}
+    int modo;
 
-  int secar = 0;
-  int Enxaguar e secar = 0;
-  int Lavar, Enxaguar e secar = 0;
+    while (1) {
+        printf("1. Secar\n");
+        printf("2. Enxaguar e Secar\n");
+        printf("3. Lavar, Enxaguar e Secar\n");
+        printf("4. Desligar\n");
+        printf("Escolha um dos modos acima: ");
+        scanf ("%d", &modo);
 
-  while( modo != 'x' ) {
-    switch (modo) {
-      case 'S':
-	quantidadeP++;
-	break;
-      case 'E': 
-	quantidadeM++;
-	break;
-      case 'L':
-	quantidadeG++;
-	break;
+        if (modo == 4) {
+            printf ("Máquina desligada!");
+            break;
+        }
+
+        switch(modo) {
+            case 1:
+                secar();
+                break;
+            case 2:
+                enxaguar_e_secar();
+                break;
+            case 3:
+                lavar_enxaguar_e_secar();
+                break;
+        }
     }
 
-    printf("Digite o tamanho recebido, F para encerrar:");
-    scanf("%c", &tamanho);
-  }
-
-  printf("P: %d M: %d G: %d", quantidadeP, quantidadeM, quantidadeG);
-  return 0;
+    return 0;
 }

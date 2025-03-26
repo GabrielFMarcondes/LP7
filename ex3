@@ -1,46 +1,37 @@
 #include <stdio.h>
 
 int main() {
-
-    int secar() {
-    printf("Secando...\n\n");
-}
-    int enxaguar_e_secar() {
-    printf("Enxaguando...\n");
-    printf("Secando...\n\n");
-}
-    int lavar_enxaguar_e_secar() {
-    printf("Lavando...\n");
-    printf("Enxaguando...\n");
-    printf("Secando...\n\n");
-}
-    int modo;
+    int quantidadeSecar = 0;
+    int quantidadeEnxaguar = 0;
+    int quantidadeLavar = 0;
+    char modo;
 
     while (1) {
-        printf("1. Secar\n");
-        printf("2. Enxaguar e Secar\n");
-        printf("3. Lavar, Enxaguar e Secar\n");
-        printf("4. Desligar\n");
-        printf("Escolha um dos modos acima: ");
-        scanf ("%d", &modo);
+        printf("\n1. Secar; \n2. Enxaguar e Secar; \n3. Lavar, Enxaguar e Secar; \n4. Ver média da máquina. \nDigite 1 dos modos: ");
 
-        if (modo == 4) {
-            printf ("Máquina desligada!");
+        modo = getchar();
+        getchar();
+
+        if (modo == '4') {
             break;
         }
 
-        switch(modo) {
-            case 1:
-                secar();
+        switch (modo) {
+            case '1':
+                quantidadeSecar++;
                 break;
-            case 2:
-                enxaguar_e_secar();
+            case '2':
+                quantidadeEnxaguar++;
+                quantidadeSecar++;
                 break;
-            case 3:
-                lavar_enxaguar_e_secar();
+            case '3':
+                quantidadeLavar++;
+                quantidadeEnxaguar++;
+                quantidadeSecar++;
                 break;
         }
     }
 
+    printf("\nLavar: %d Enxaguar: %d Secar: %d", quantidadeLavar, quantidadeEnxaguar, quantidadeSecar);
     return 0;
 }

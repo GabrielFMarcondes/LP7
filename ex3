@@ -1,37 +1,26 @@
 #include <stdio.h>
 
 int main() {
-    int quantidadeSecar = 0;
-    int quantidadeEnxaguar = 0;
-    int quantidadeLavar = 0;
+    
     char modo;
 
     while (1) {
-        printf("\n1. Secar; \n2. Enxaguar e Secar; \n3. Lavar, Enxaguar e Secar; \n4. Ver média da máquina. \nDigite 1 dos modos: ");
+        printf("\n1. Secar; \n2. Enxaguar e Secar; \n3. Lavar, Enxaguar e Secar; \n4. Encerrar progrma de lavagem. \nDigite 1 dos modos: ");
 
         modo = getchar();
         getchar();
 
-        if (modo == '4') {
-            break;
-        }
-
         switch (modo) {
+            case '3': 
+            printf ("\nLavando...");
+            case '2'4:
+            printf ("\nEnxaguando...");
             case '1':
-                quantidadeSecar++;
-                break;
-            case '2':
-                quantidadeEnxaguar++;
-                quantidadeSecar++;
-                break;
-            case '3':
-                quantidadeLavar++;
-                quantidadeEnxaguar++;
-                quantidadeSecar++;
-                break;
+            printf ("\nSecando...\n");
         }
     }
-
-    printf("\nLavar: %d Enxaguar: %d Secar: %d", quantidadeLavar, quantidadeEnxaguar, quantidadeSecar);
-    return 0;
+                if (modo == 4) {
+                printf ("Máquina desligada!");
+                }
+return 0;
 }

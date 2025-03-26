@@ -1,1 +1,15 @@
+#include <stdio.h>
 
+int main(void) {
+  
+    int fim;
+    int total = 0;
+    printf ("Insira um número: ");
+    scanf ("%d", &fim);
+    
+    for (int impar = 1; impar <= fim; total += impar, impar += 2) {
+         }
+    printf ("A soma dos impares até o número que escolheu é: %d", total); 
+
+  return 0;
+}

@@ -4,7 +4,7 @@ int main(void) {
   char tamanho;
 
   printf("Digite o tamanho recebido, F para encerrar:");
-  getchar();
+  tamanho = getchar();
   getchar();
 
   int quantidadeP = 0;

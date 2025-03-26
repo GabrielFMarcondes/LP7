@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main(void) {
+  char modo;
+
+  printf("Digite o modo da máquina (x para encerrar:");
+  scanf("%c", &tamanho);
+
+  int secar = 0;
+  int Enxaguar e secar = 0;
+  int Lavar, Enxaguar e secar = 0;
+
+  while( modo != 'x' ) {
+    switch (modo) {
+      case 'S':
+	quantidadeP++;
+	break;
+      case 'E': 
+	quantidadeM++;
+	break;
+      case 'L':
+	quantidadeG++;
+	break;
+    }
+
+    printf("Digite o tamanho recebido, F para encerrar:");
+    scanf("%c", &tamanho);
+  }
+
+  printf("P: %d M: %d G: %d", quantidadeP, quantidadeM, quantidadeG);
+  return 0;
+}

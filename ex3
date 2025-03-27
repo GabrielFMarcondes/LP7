@@ -4,8 +4,8 @@ int main() {
     
     char modo;
 
-    while (1) {
-        printf("\n1. Secar; \n2. Enxaguar e Secar; \n3. Lavar, Enxaguar e Secar; \n4. Encerrar progrma de lavagem. \nDigite 1 dos modos: ");
+    while (modo != '4') {
+        printf("1. Secar; \n2. Enxaguar e Secar; \n3. Lavar, Enxaguar e Secar; \n4. Encerrar progrma de lavagem. \nDigite 1 dos modos: ");
 
         modo = getchar();
         getchar();
@@ -13,14 +13,13 @@ int main() {
         switch (modo) {
             case '3': 
             printf ("\nLavando...");
-            case '2'4:
+            case '2':
             printf ("\nEnxaguando...");
             case '1':
-            printf ("\nSecando...\n");
+            printf ("\nSecando...");
+            printf ("\nfinalizado.\n\n");
         }
     }
-                if (modo == 4) {
-                printf ("Máquina desligada!");
-                }
+       printf ("\nMáquina desligada!");         
 return 0;
 }

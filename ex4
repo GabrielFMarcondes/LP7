@@ -1,0 +1,51 @@
+#include <stdio.h>
+
+int main(void) {
+    int batata = 0, hamburguer = 0, suco = 0, combo = 0;
+    int quanttotal = 0;
+    float preçobatata = 10, preçohamburguer = 15, preçosuco = 9, preçocombo = 30;
+    float valortotal = 0;
+    char produto;
+
+    printf("Digite o número do produto vendido: \n1. Batata; \n2. Hamburguer; \n3. Suco; \n4. Combo; \n5. Fechar o caixa.\n");
+    produto = getchar();
+    getchar();
+    
+    while (produto != '5') {
+        switch (produto) {
+            case '1':
+                batata++;
+                valortotal += preçobatata;
+                quanttotal++;
+                break;
+            case '2':
+                hamburguer++;
+                valortotal += preçohamburguer;
+                quanttotal++;
+                break;
+            case '3':
+                suco++;
+                valortotal += preçosuco;
+                quanttotal++;
+                break;
+            case '4':
+                combo++;
+                valortotal += preçocombo;
+                quanttotal++;
+                break;
+        }
+        printf("\nDigite o número do produto vendido: \n1. Batata; \n2. Hamburguer; \n3. Suco; \n4. Combo; \n5. Fechar o caixa.\n");
+        produto = getchar();
+        getchar();
+    }
+    printf("\nRelatório de vendas:\n");
+    printf("Suco:       %d vendidos\n", suco);
+    printf("Batata:     %d vendidas\n", batata);
+    printf("Hamburguer: %d vendidos\n", hamburguer);
+    printf("Combos:     %d vendidos\n", combo);
+    printf("_____________________________\n");
+    printf("Total:      %d itens\n", quanttotal);
+    printf("Valor total: R$ %.2f\n", valortotal);
+
+    return 0;
+}
